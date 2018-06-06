@@ -13,6 +13,8 @@ ggplot(data = ifdata, aes(x = launch_speed, y = hit_distance_sc, group = if_fiel
                           colour = if_fielding_alignment)) + geom_point()
 ggplot(data = ifdata, aes(x = launch_speed, group = if_fielding_alignment, 
                           colour = if_fielding_alignment)) + geom_histogram(binwidth = 5)
+ggplot(data = ifdata, aes(x = launch_speed, group = if_fielding_alignment, 
+                          colour = if_fielding_alignment)) + geom_density()
 
 ofdata <- mydata[mydata$hit_location %in% c(7,8,9),]
 ggplot(data = ofdata, aes(x = launch_speed, y = hit_distance_sc, group = if_fielding_alignment, 
